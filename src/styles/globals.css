@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .iconHoverAnimation {
+    @apply hover:bg-[#1e1e1e] hover:bg-opacity-10 rounded-full cursor-pointer w-9 h-9 flex items-center justify-center transition ease-out m-0;
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #e6e6e6 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}

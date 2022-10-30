@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  env: {
+    LASTFM_API_KEY: "d1991f52e38148193d246584f69a1452",
+  },
+  images: {
+    domains: ["images.unsplash.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
