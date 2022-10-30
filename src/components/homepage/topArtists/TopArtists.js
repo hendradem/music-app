@@ -13,7 +13,7 @@ function TopArtists({ artistsData }) {
           artistsData.map((item, index) => {
             return (
               <Link key={index} href={`/detail/profile?name=${item.name}`}>
-                <a key={index}>
+                <a>
                   <li
                     key={index}
                     className="rounded-md flex flex-col items-center space-y-2 cursor-pointer"
