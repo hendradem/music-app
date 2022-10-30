@@ -4,12 +4,12 @@ import Layout from "../../layout/Layout";
 import Login from "../auth/Login";
 
 function index() {
-  const { session } = useSession();
-  if (!session) return <Login />;
+  // const { session } = useSession();
+  // if (!session) return <Login />;
   return (
     <div>
       <Layout withMenu={true}>
-        <h1> {session.user.name} </h1>
+        <h1> collections </h1>
       </Layout>
     </div>
   );
