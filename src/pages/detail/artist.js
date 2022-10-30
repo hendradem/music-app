@@ -8,7 +8,7 @@ import ProfilModal from "../../components/modal/ProfilModal";
 
 import { HiArrowSmLeft } from "react-icons/hi";
 
-function artist() {
+function Artist() {
   const APIurl = process.env.NEXT_PUBLIC_LASTFM_API_URL;
   const [topArtist, setTopArtist] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -86,7 +86,10 @@ function artist() {
               {topArtist &&
                 topArtist.map((item, index) => {
                   return (
-                    <Link href={`/detail/profile?name=${item.name}`}>
+                    <Link
+                      key={index}
+                      href={`/detail/profile?name=${item.name}`}
+                    >
                       <a>
                         <li
                           key={index}
@@ -123,4 +126,4 @@ function artist() {
   );
 }
 
-export default artist;
+export default Artist;

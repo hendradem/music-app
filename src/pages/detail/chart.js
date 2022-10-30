@@ -7,7 +7,7 @@ import VertivalListLoader from "../../components/loader/VertivalListLoader";
 import { HiArrowSmLeft } from "react-icons/hi";
 import ProfilModal from "../../components/modal/ProfilModal";
 
-function chart() {
+function Chart() {
   const APIurl = process.env.NEXT_PUBLIC_LASTFM_API_URL;
   const [topChart, setTopChart] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -124,4 +124,4 @@ function chart() {
   );
 }
 
-export default chart;
+export default Chart;

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function VerticalListCard({ listData, listType }) {
   return (
@@ -45,9 +46,11 @@ function VerticalListCard({ listData, listType }) {
                   >
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
-                        <img
+                        <Image
                           src="https://source.unsplash.com/random/?night,sunset"
                           alt=""
+                          width={100}
+                          height={100}
                           className="h-10 w-10 rounded-md xl:mr-2.5"
                         />
                       </div>

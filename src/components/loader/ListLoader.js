@@ -7,10 +7,10 @@ function ListLoader() {
         role="status"
         className="p-0 mt-[10px] space-y-4 max-w-md rounded shadow animate-pulse dark:divide-gray-700   "
       >
-        <div className="flex h-6 items-center w-full space-x-2 max-w-[360px]">
-          <div className="h-6 bg-gray-300 rounded-full dark:bg-gray-600 w-[65px]"></div>
-          <div className="h-6 bg-gray-200 rounded-full dark:bg-gray-700 w-[65px]"></div>
-          <div className="h-6 bg-gray-300 rounded-full dark:bg-gray-600 w-[70px]"></div>
+        <div class="flex h-6 items-center w-full space-x-2 max-w-[360px]">
+          <div class="h-6 bg-gray-300 rounded-full dark:bg-gray-600 w-[65px]"></div>
+          <div class="h-6 bg-gray-200 rounded-full dark:bg-gray-700 w-[65px]"></div>
+          <div class="h-6 bg-gray-300 rounded-full dark:bg-gray-600 w-[70px]"></div>
         </div>
 
         <div className="flex">

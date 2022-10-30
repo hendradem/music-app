@@ -6,6 +6,7 @@ import Layout from "../../layout/Layout";
 import Navbar from "../../layout/navbar/Navbar";
 import VerticalListCard from "../../components/list/VerticalListCard";
 import { HiArrowSmLeft } from "react-icons/hi";
+import Image from "next/image";
 
 export default function Profile() {
   const router = useRouter();
@@ -52,11 +53,11 @@ export default function Profile() {
 
   const loader = () => {
     return (
-      <div class="flex space-x-3 animate-pulse">
+      <div className="flex space-x-3 animate-pulse">
         <div className="w-[100px] h-[100px] rounded-xl bg-gray-200"></div>
         <div className="flex flex-col items-start mt-2">
-          <div class="h-5 bg-gray-200 rounded-md dark:bg-gray-700 w-32 mb-3"></div>
-          <div class="w-48 h-3 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+          <div className="h-5 bg-gray-200 rounded-md dark:bg-gray-700 w-32 mb-3"></div>
+          <div className="w-48 h-3 bg-gray-200 rounded-full dark:bg-gray-700"></div>
         </div>
       </div>
     );
@@ -79,20 +80,22 @@ export default function Profile() {
             loader()
           ) : (
             <div>
-              <div class="flex artist-data-information">
-                <img
-                  class="mb-3 w-[100px] h-[100px] object-cover rounded-xl shadow-lg"
+              <div className="flex artist-data-information">
+                <Image
+                  width={100}
+                  height={100}
+                  className="mb-3 w-[100px] h-[100px] object-cover rounded-xl shadow-lg"
                   src="https://images.unsplash.com/photo-1599594407433-7bbdab928b61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fHNpbmdlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
                   alt="Bonnie image"
                 />
                 <div className="ml-4">
-                  <h5 class="text-xl font-medium text-white dark:text-white">
+                  <h5 className="text-xl font-medium text-white dark:text-white">
                     {data && data.name}
                   </h5>
 
-                  <ul class="space-y-1 max-w-md list-inside text-gray-500 dark:text-gray-400">
+                  <ul className="space-y-1 max-w-md list-inside text-gray-500 dark:text-gray-400">
                     <li>
-                      <span class="font-normal text-[15px] text-gray-200 dark:text-white">
+                      <span className="font-normal text-[15px] text-gray-200 dark:text-white">
                         {data &&
                           parseInt(data.stats.listeners).toLocaleString()}{" "}
                         listeners
@@ -104,7 +107,7 @@ export default function Profile() {
                     {data &&
                       data.tags.tag.map((item) => {
                         return (
-                          <span class="text-gray-100 border border-gray-400 text-xs mr-2 mt-1 px-2.5 py-0.5 rounded-full">
+                          <span className="text-gray-100 border border-gray-400 text-xs mr-2 mt-1 px-2.5 py-0.5 rounded-full">
                             {item.name}
                           </span>
                         );
@@ -115,7 +118,7 @@ export default function Profile() {
                     <a target="_blank">
                       <button
                         type="button"
-                        class="text-gray-900 mt-4 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-0  font-medium rounded-md text-sm px-2 py-1"
+                        className="text-gray-900 mt-4 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-0  font-medium rounded-md text-sm px-2 py-1"
                       >
                         Full profile
                       </button>
@@ -123,7 +126,7 @@ export default function Profile() {
                   </Link> */}
                 </div>
               </div>
-              <span class="text-sm text-white dark:text-gray-400">
+              <span className="text-sm text-white dark:text-gray-400">
                 <span>
                   <p className="text-white font-semibold text-lg">About</p>
                 </span>

@@ -21,6 +21,7 @@ function Index() {
     songs: "track.search",
     artists: "artist.search",
     geo: "geo.gettopartists&country=indonesia",
+    topTracks: "artist.gettoptracks",
   };
   useEffect(() => {
     getSearchData();
@@ -33,22 +34,35 @@ function Index() {
       const artist = await axios.get(
         `${APIurl}/?format=json&method=${searchMethod.artists}&artist=${searchValue}&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}`
       );
+      const topSongs = await axios.get(
+        `${APIurl}/?format=json&method=${searchMethod.topTracks}&artist=${searchValue}&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}`
+      );
       const song = await axios.get(
         `${APIurl}/?format=json&method=${searchMethod.songs}&track=${searchValue}&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}`
       );
+
+      // get top 5 songs
+      const topSongsResult = topSongs.data.toptracks.track.splice(0, 5);
 
       const artistResult = artist.data.results.artistmatches.artist;
       artistResult.map((item) => {
         item.type = "artist";
       });
-      const songResult = song.data.results.trackmatches.track;
+      const songResult = topSongsResult.concat(
+        song.data.results.trackmatches.track.slice(5, 30)
+      );
       songResult.map((item) => {
         item.type = "song";
       });
 
-      const resultData = artistResult.concat(songResult);
-      setSearchResult(resultData);
-      setSelectedFilter("all"); // set selected filter to add conditional css in filter button
+      // const resultData = artistResult.concat(songResult);
+      // setSearchResult(resultData);
+      setSelectedFilter("top"); // set selected filter to add conditional css in filter button
+
+      if (selectedFilter === "top") {
+        setSearchResult(songResult);
+      }
+
       setIsLoading(false);
     } catch (error) {
       console.error(error);

@@ -9,9 +9,23 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
         <button
           type="button"
           onClick={() => {
+            filterBy("top");
+          }}
+          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+            selectedSearchFilter === "top"
+              ? "bg-white text-gray-800"
+              : " bg-[#202020]"
+          }`}
+        >
+          <HiMenuAlt2 className="w-3 h-3 mr-2" />
+          Top
+        </button>
+        <button
+          type="button"
+          onClick={() => {
             filterBy("all");
           }}
-          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "all"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"
@@ -25,7 +39,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           onClick={() => {
             filterBy("song"); // call function from props (parent) to add filter by song
           }}
-          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "song"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"
@@ -39,7 +53,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           onClick={() => {
             filterBy("artist"); // call function from props (parent) to add filter by artist
           }}
-          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "artist"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"
@@ -55,7 +69,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           {data &&
             data.map((item, index) => {
               return (
-                <div>
+                <div key={index}>
                   {item.type == "artist" ? (
                     <Link href={`/detail/profile?name=${item.name}`}>
                       <a>

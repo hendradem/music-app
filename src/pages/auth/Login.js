@@ -12,16 +12,17 @@ function Login() {
               Sign in
             </h1>
             <div
-              className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
+              class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"
               role="alert"
             >
-              <span className="font-medium">
-                Only available login with Google!
-              </span>
+              <span class="font-medium">Only available login with Google!</span>
             </div>
             <form className="space-y-2 md:space-y-4" action="#">
               <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                <label
+                  for="email-address-icon"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
                   Your Email
                 </label>
                 <div className="relative">
@@ -36,7 +37,10 @@ function Login() {
                 </div>
               </div>
               <div>
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                <label
+                  for="email-address-icon"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
                   Password
                 </label>
                 <div className="relative">
@@ -62,7 +66,10 @@ function Login() {
                     />
                   </div>
                   <div className="ml-3 text-sm">
-                    <label className="text-gray-500 dark:text-gray-300">
+                    <label
+                      for="remember"
+                      className="text-gray-500 dark:text-gray-300"
+                    >
                       Remember me
                     </label>
                   </div>
