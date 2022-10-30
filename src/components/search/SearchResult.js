@@ -11,7 +11,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           onClick={() => {
             filterBy("top");
           }}
-          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "top"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"
@@ -25,7 +25,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           onClick={() => {
             filterBy("all");
           }}
-          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "all"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"
@@ -39,7 +39,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           onClick={() => {
             filterBy("song"); // call function from props (parent) to add filter by song
           }}
-          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "song"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"
@@ -53,7 +53,7 @@ function SearchResult({ data, filterBy, selectedSearchFilter }) {
           onClick={() => {
             filterBy("artist"); // call function from props (parent) to add filter by artist
           }}
-          class={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
+          className={`flex items-center text-white  border-0 border-gray-300 focus:outline-none focus:ring-0 font-medium rounded-full text-sm px-3 py-[3px] mr-2 mb-2 ${
             selectedSearchFilter === "artist"
               ? "bg-white text-gray-800"
               : " bg-[#202020]"

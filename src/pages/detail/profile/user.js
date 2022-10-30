@@ -2,7 +2,7 @@ import React from "react";
 import { getSession, getProviders, useSession, signOut } from "next-auth/react";
 import Layout from "../../../layout/Layout";
 import Login from "../../auth/Login";
-import Image from "next/image";
+// import Image from "next/image";
 
 function User() {
   const { data: session } = useSession();
@@ -12,13 +12,13 @@ function User() {
       <Layout withMenu={true}>
         <div className="w-full p-14">
           <div className="flex flex-col items-center py-10 bg-white rounded-md">
-            <Image
+            {/* <Image
               className="mb-3 w-24 h-24 rounded-full shadow-lg"
               src={session.user.image}
               alt="Name"
               width={100}
               height={100}
-            />
+            /> */}
             <h5 className="text-xl font-medium text-gray-900 dark:text-white">
               {session.user.name}
             </h5>

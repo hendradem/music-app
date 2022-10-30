@@ -51,6 +51,7 @@ function TopCharts({ chartData }) {
                   <Image
                     width={100}
                     height={100}
+                    alt="as"
                     className="w-full h-full bg-contain"
                     src="https://images.unsplash.com/photo-1661103517104-9d118ccad126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60"
                   />

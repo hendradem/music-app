@@ -105,9 +105,12 @@ export default function Profile() {
 
                   <div className="flex flex-wrap mt-2">
                     {data &&
-                      data.tags.tag.map((item) => {
+                      data.tags.tag.map((item, index) => {
                         return (
-                          <span className="text-gray-100 border border-gray-400 text-xs mr-2 mt-1 px-2.5 py-0.5 rounded-full">
+                          <span
+                            key={index}
+                            className="text-gray-100 border border-gray-400 text-xs mr-2 mt-1 px-2.5 py-0.5 rounded-full"
+                          >
                             {item.name}
                           </span>
                         );
@@ -150,9 +153,12 @@ export default function Profile() {
                 </span>
                 <ul className="grid grid-cols-5 gap-2 mt-3">
                   {data &&
-                    data.similar.artist.map((item) => {
+                    data.similar.artist.map((item, index) => {
                       return (
-                        <Link href={`/detail/profile?name=${item.name}`}>
+                        <Link
+                          key={index}
+                          href={`/detail/profile?name=${item.name}`}
+                        >
                           <a>
                             <li className="rounded-md flex flex-col items-center space-y-2 cursor-pointer">
                               <img

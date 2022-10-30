@@ -23,6 +23,7 @@ function TopArtists({ artistsData }) {
                       height={100}
                       className="w-[90px] h-[90px] rounded-full"
                       src={pic}
+                      alt="as"
                     />
 
                     <span className="text-[14px] text-gray-500 font-medium">
